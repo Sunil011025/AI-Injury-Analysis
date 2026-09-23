@@ -99,7 +99,8 @@ AI-Injury-Analysis/
 
 The home page allows users to upload an image of a visible injury.
 
-![Home Page](screenshots/home.png)
+<img width="630" height="277" alt="Screenshot 2026-09-23 222034" src="https://github.com/user-attachments/assets/dff402be-2834-4f96-bd47-25f02fc1ec3c" />
+
 
 ---
 
@@ -107,7 +108,8 @@ The home page allows users to upload an image of a visible injury.
 
 The application supports JPG, JPEG, PNG, and WEBP image formats.
 
-![Image Upload](screenshots/upload.png)
+<img width="633" height="447" alt="Screenshot 2026-09-23 222051" src="https://github.com/user-attachments/assets/ba794136-c398-4ee4-b698-07d44d48595f" />
+
 
 ---
 
@@ -115,7 +117,9 @@ The application supports JPG, JPEG, PNG, and WEBP image formats.
 
 After uploading the image, Gemini AI analyzes the injury and provides structured information.
 
-![AI Injury Analysis Result](screenshots/result.png)
+<img width="1407" height="917" alt="Screenshot 2026-09-23 222237" src="https://github.com/user-attachments/assets/ac899992-afe7-4e7e-9e4d-77667ae5bdf8" />
+<img width="1400" height="541" alt="image" src="https://github.com/user-attachments/assets/a805d5b9-acbf-41f4-97af-95a878464d8a" />
+
 
 ---
 
