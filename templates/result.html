@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Injury Analysis Result</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <header>
+
+            <h1>🩹 AI Injury Analysis</h1>
+
+            <p>
+                AI-assisted first-aid information
+            </p>
+
+        </header>
+
+
+        <!-- Main Result -->
+
+        <div class="result-grid">
+
+
+            <!-- Image Card -->
+
+            <div class="image-card">
+
+                <h2>Uploaded Image</h2>
+
+                <img
+                    src="{{ url_for('static', filename='../uploads/' + image_filename) }}"
+                    alt="Uploaded injury image"
+                >
+
+            </div>
+
+
+            <!-- Analysis Card -->
+
+            <div class="analysis-card">
+
+
+                <!-- Possible Injury -->
+
+                <section>
+
+                    <h2>🔍 Possible Injury</h2>
+
+                    <p class="injury-type">
+
+                        {{ result.injury_type }}
+
+                    </p>
+
+                </section>
+
+
+                <!-- First Aid -->
+
+                <section>
+
+                    <h2>🩹 Basic First-Aid Guidance</h2>
+
+                    <ul>
+
+                        {% for item in result.first_aid %}
+
+                        <li>
+                            {{ item }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </section>
+
+
+                <!-- Precautions -->
+
+                <section>
+
+                    <h2>⚠️ Precautions</h2>
+
+                    <ul>
+
+                        {% for item in result.precautions %}
+
+                        <li>
+                            {{ item }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </section>
+
+
+                <!-- Recovery -->
+
+                <section>
+
+                    <h2>🕒 General Recovery Information</h2>
+
+                    <p>
+
+                        {{ result.recovery }}
+
+                    </p>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <!-- Warning Section -->
+
+        <div class="warning-card">
+
+            <h2>🚨 When to Seek Medical Attention</h2>
+
+            <ul>
+
+                {% for item in result.warning_signs %}
+
+                <li>
+                    {{ item }}
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+
+        <!-- Disclaimer -->
+
+        <div class="disclaimer">
+
+            <strong>Medical Disclaimer:</strong>
+
+            This system provides AI-assisted general
+            information and is not a substitute for
+            professional medical advice, diagnosis,
+            or treatment.
+
+        </div>
+
+
+        <!-- Button -->
+
+        <div class="button-container">
+
+            <a href="/" class="button">
+
+                Analyze Another Image
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

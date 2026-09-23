@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+header p {
+    color: #6b7280;
+}
+
+
+/* Main grid */
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.image-card,
+.analysis-card,
+.warning-card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Image */
+
+.image-card img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+
+/* Section */
+
+section {
+    margin-bottom: 25px;
+}
+
+
+section h2,
+.warning-card h2 {
+    margin-bottom: 12px;
+}
+
+
+.injury-type {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Lists */
+
+ul {
+    padding-left: 25px;
+}
+
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+/* Warning */
+
+.warning-card {
+    margin-top: 25px;
+}
+
+
+/* Disclaimer */
+
+.disclaimer {
+    margin-top: 25px;
+    padding: 18px;
+    background: #fff7ed;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+
+/* Button */
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+
+.button:hover {
+    opacity: 0.9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+}
+/* =====================================
+   Upload Page
+   ===================================== */
+
+.upload-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+/* Header */
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.upload-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+.upload-header p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* Upload card */
+
+.upload-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Drop area */
+
+.drop-area {
+    border: 2px dashed #cbd5e1;
+
+    border-radius: 14px;
+
+    padding: 45px 20px;
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+
+.drop-area.dragging {
+    border-color: #2563eb;
+
+    background: #eff6ff;
+}
+
+
+.upload-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.drop-area h2 {
+    margin-bottom: 8px;
+}
+
+
+.drop-area p {
+    color: #6b7280;
+}
+
+
+.or-text {
+    margin: 15px 0;
+}
+
+
+/* Choose button */
+
+.choose-button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.choose-button:hover {
+    opacity: 0.9;
+}
+
+
+.file-info {
+    font-size: 13px;
+
+    margin-top: 18px;
+}
+
+
+/* Error */
+
+.error-message {
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    line-height: 1.5;
+}
+
+
+/* Preview */
+
+.preview-container {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+.preview-container h3 {
+    margin-bottom: 15px;
+}
+
+
+.preview-container img {
+    width: 100%;
+
+    max-width: 450px;
+
+    max-height: 400px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+#fileName {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-top: 10px;
+}
+
+
+/* Analyze button */
+
+.analyze-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.analyze-button:hover {
+    opacity: 0.9;
+}
+
+
+.analyze-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* Loading */
+
+.loading {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding: 20px;
+}
+
+
+.spinner {
+    width: 35px;
+
+    height: 35px;
+
+    margin: auto;
+
+    border: 4px solid #e5e7eb;
+
+    border-top: 4px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.loading p {
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+
+.loading small {
+    color: #6b7280;
+}
+
+
+/* Disclaimer */
+
+.upload-disclaimer {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background: #fff7ed;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .upload-container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    .upload-header h1 {
+        font-size: 28px;
+    }
+
+
+    .upload-card {
+        padding: 20px;
+    }
+
+
+    .drop-area {
+        padding: 35px 15px;
+    }
+
+}
