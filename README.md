@@ -4,7 +4,7 @@ An AI-powered web application that analyzes images of visible injuries and provi
 
 The application allows users to upload an injury image and receive AI-assisted information about the possible injury type, basic first aid, precautions, recovery information, and warning signs that may require professional medical attention.
 
-# ⚠️ This application provides general first-aid information and is not intended to provide a medical diagnosis.
+> ⚠️ This application provides general first-aid information and is not intended to provide a medical diagnosis.
 
 ---
 
@@ -52,4 +52,5 @@ Gemini AI
 Structured Response
   ↓
 Result Page
+
 
